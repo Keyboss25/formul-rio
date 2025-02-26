@@ -15,19 +15,19 @@
     <form id="deliveryForm">
         <label>Nome:</label>
         <input type="text" id="nome" required>
-        
+
         <label>Telefone:</label>
         <input type="tel" id="telefone" required>
-        
+
         <label>Endereço:</label>
         <input type="text" id="endereco" required>
-        
+
         <label>Código do Pedido:</label>
         <input type="text" id="codigoPedido" required>
-        
+
         <label>Produto Comprado:</label>
         <input type="text" id="produto" required>
-        
+
         <button type="submit">Enviar</button>
     </form>
 
@@ -40,7 +40,7 @@
             const codigoPedido = document.getElementById("codigoPedido").value;
             const produto = document.getElementById("produto").value;
 
-            fetch("https://api.sheetmonkey.io/form/SEU_TOKEN", {
+            fetch("https://api.sheetmonkey.io/form/bL1uwqiSzBhBaigRw7GSuv", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ Nome: nome, Telefone: telefone, Endereço: endereco, Código: codigoPedido, Produto: produto })
