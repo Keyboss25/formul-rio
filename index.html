@@ -31,6 +31,12 @@
         <button type="submit">Enviar</button>
     </form>
 
+    <h2>Pagamento</h2>
+    <p>Após preencher o formulário, clique no botão abaixo para efetuar o pagamento.</p>
+    <a href="https://mpago.la/24NgS6U" target="_blank">
+        <button>Pagar Agora</button>
+    </a>
+
     <script>
         document.getElementById("deliveryForm").addEventListener("submit", function(event) {
             event.preventDefault();
@@ -44,7 +50,7 @@
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ Nome: nome, Telefone: telefone, Endereço: endereco, Código: codigoPedido, Produto: produto })
-            }).then(() => alert("Formulário enviado com sucesso!"));
+            }).then(() => alert("Formulário enviado com sucesso! Agora realize o pagamento."));
         });
     </script>
 </body>
